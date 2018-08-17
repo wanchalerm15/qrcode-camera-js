@@ -1,5 +1,5 @@
 # qrcode-camera-js
 Javascript scan qrcode
 
-# Credit :
+#Credit :
 https://github.com/schmich/instascan
