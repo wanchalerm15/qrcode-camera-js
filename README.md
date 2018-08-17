@@ -1,5 +1,4 @@
 # qrcode-camera-js
-Javascript scan qrcode
+Javascript scan qrcode สอนการเขียน Javascript กับการ scan barcode แบบง่ายๆกันครับ
 
-#Credit :
-https://github.com/schmich/instascan
+Credit : https://github.com/schmich/instascan
