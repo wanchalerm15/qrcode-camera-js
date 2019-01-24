@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>javascript scan qrcode</title>
+    <!-- <link rel="stylesheet" href="./assets/bootstrap.min.css"> -->
+    <script src="./assets/instascan-v2.min.js"></script>
+    <!-- <script src="./assets/instascan.min.js"></script> -->
+    <!-- <script src="./assets/vue.min.js"></script> -->
 </head>
 
 <body>
+    <video id="preview"></video>
+    <script>
+        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
 
+        scanner.addListener('scan', content => {
+            console.log(content);
+        });
+
+        Instascan.Camera.getCameras().then(cameras => {
+            if (cameras.length <= 0) return;
+            scanner.camera = cameras[cameras.length - 1];
+            scanner.start();
+        }).catch(e => console.error(e));
+    </script>
 </body>
 
 </html>
